@@ -14,5 +14,8 @@ public class Main {
         Pikachu peterkachu = new Pikachu("lila", "Peter", 5);
         peterkachu.attack(enemy_pokemon);
 
+        //GitHub-Test
+        System.out.println("GitHub-Test");
+
     }
 }
