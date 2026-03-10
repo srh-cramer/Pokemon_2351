@@ -1,4 +1,4 @@
-public class Pokemon {
+public abstract class Pokemon {
     private String type;
     private String name;
     private int level;
@@ -52,13 +52,6 @@ public class Pokemon {
         this.ability = ability;
     }
 
-    public void attack(Pokemon target){
-        //Gib aus: Herbert greift Voltron mit Flammenwurf an.
-        System.out.println(this.getName() + " greift " + target.getName() + " mit " + this.getAbility().getName() + " an.");
-        int my_damage = this.getAbility().getDamage();
-        int newTargetHealth = target.getHealth() - my_damage;    //hier wird nichts gesettet
-        target.setHealth(newTargetHealth);  //hier überschreiben wir target.health von 100 auf 90
-        System.out.println(target.getName() + " hat noch " + target.getHealth() + " HP.");
-    }
+    public abstract void attack(Pokemon target);
 
 }
